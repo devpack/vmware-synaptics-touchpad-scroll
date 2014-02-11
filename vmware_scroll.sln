@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vmware_scroll_start", "vmware_scroll\vmware_scroll.vcxproj", "{4AEFA11E-5879-446E-93CA-E907819E0819}"
+	ProjectSection(ProjectDependencies) = postProject
+		{80CA93BD-DC05-4DE1-AECD-8A3E2B6B83EA} = {80CA93BD-DC05-4DE1-AECD-8A3E2B6B83EA}
+		{6010FEEB-F705-4711-B866-B95F4589D630} = {6010FEEB-F705-4711-B866-B95F4589D630}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hook", "hook\hook.vcxproj", "{6010FEEB-F705-4711-B866-B95F4589D630}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vmware_scroll_stop", "vmware_scroll_stop\vmware_scroll_stop.vcxproj", "{80CA93BD-DC05-4DE1-AECD-8A3E2B6B83EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6010FEEB-F705-4711-B866-B95F4589D630} = {6010FEEB-F705-4711-B866-B95F4589D630}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AEFA11E-5879-446E-93CA-E907819E0819}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4AEFA11E-5879-446E-93CA-E907819E0819}.Debug|Win32.Build.0 = Debug|Win32
+		{4AEFA11E-5879-446E-93CA-E907819E0819}.Release|Win32.ActiveCfg = Release|Win32
+		{4AEFA11E-5879-446E-93CA-E907819E0819}.Release|Win32.Build.0 = Release|Win32
+		{6010FEEB-F705-4711-B866-B95F4589D630}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6010FEEB-F705-4711-B866-B95F4589D630}.Debug|Win32.Build.0 = Debug|Win32
+		{6010FEEB-F705-4711-B866-B95F4589D630}.Release|Win32.ActiveCfg = Release|Win32
+		{6010FEEB-F705-4711-B866-B95F4589D630}.Release|Win32.Build.0 = Release|Win32
+		{80CA93BD-DC05-4DE1-AECD-8A3E2B6B83EA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{80CA93BD-DC05-4DE1-AECD-8A3E2B6B83EA}.Debug|Win32.Build.0 = Debug|Win32
+		{80CA93BD-DC05-4DE1-AECD-8A3E2B6B83EA}.Release|Win32.ActiveCfg = Release|Win32
+		{80CA93BD-DC05-4DE1-AECD-8A3E2B6B83EA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
