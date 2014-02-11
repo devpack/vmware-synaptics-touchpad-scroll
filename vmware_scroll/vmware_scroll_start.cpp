@@ -1,5 +1,4 @@
 #include <windows.h>
-#include <iostream>
 #include <sstream>
 #include "..\hook\hook.h"
 
@@ -42,18 +41,18 @@ int CALLBACK WinMain(
 		if(lstrcmp(szArgList[1], L"0") == 0) {
 			HWND phwnd = FindWindowEx(NULL, NULL, L"VMPlayerFrame", NULL);	
 			EnumChildWindows(phwnd, (WNDENUMPROC) playerScroll, (LPARAM) &hwnd);
-			cout << "Enable Synaptics touchpad scroll for Vmware Player" << endl;
+			MessageBox(NULL, L"Enable Synaptics touchpad scroll for Vmware Player", L"", MB_OK | MB_ICONASTERISK);
 		}
 		else {
 			HWND phwnd = FindWindowEx(NULL, NULL, L"VMUIFrame", NULL);	
 			EnumChildWindows(phwnd, (WNDENUMPROC) workstationScroll, (LPARAM) &hwnd);
-			cout << "Enable Synaptics touchpad scroll for Vmware Workstation" << endl;
+			MessageBox(NULL, L"Enable Synaptics touchpad scroll for Vmware Workstation", L"", MB_OK | MB_ICONASTERISK);
 		}
 	}
 	else {
 			HWND phwnd = FindWindowEx(NULL, NULL, L"VMUIFrame", NULL);	
 			EnumChildWindows(phwnd, (WNDENUMPROC) workstationScroll, (LPARAM) &hwnd);
-			cout << "Enable Synaptics touchpad scroll for Vmware Workstation" << endl;
+			MessageBox(NULL, L"Enable Synaptics touchpad scroll for Vmware Workstation", L"", MB_OK | MB_ICONASTERISK);
 	}
  
     LocalFree(szArgList);
@@ -61,9 +60,7 @@ int CALLBACK WinMain(
 	auto res = hwnd ? !InjectDll(hwnd) : 2;
 	wstringstream wss;
 	wss << "vmware_scroll_start result: " << res;
-	cout << "vmware_scroll_start result: " << res << endl;
-	
-	//MessageBox(NULL, wss.str().data(), L"", MB_OK | MB_ICONASTERISK);
+	MessageBox(NULL, wss.str().data(), L"", MB_OK | MB_ICONASTERISK);
 
 	return res;
 }
