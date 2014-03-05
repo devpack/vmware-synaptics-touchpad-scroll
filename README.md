@@ -3,7 +3,7 @@ Use Synaptics Touchpad Scroll in VMware Guest
 
 Updated Andrew Zabavnikov fix to work also with VMware Player.
 
-1. First fix the registry: http://blog.alexou.net/2010/07/scrolling-in-gtk-apps-with-synaptics-driver
+1. First fix the registry: http://blog.alexou.net/2010/07/scrolling-in-gtk-apps-with-synaptics-driver [regedit, navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Synaptics\SynTPEnh and create a new DWORD called UseScrollCursor with a value of 0.]
 2. http://superuser.com/questions/131297/use-synaptics-touchpad-scroll-in-vmware-guest/683726#683726
 
 To use with VMware Workstation:
