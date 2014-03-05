@@ -4,22 +4,22 @@
 
 using namespace std;
 
-WNDENUMPROC playerScroll (HWND h, LPARAM p) {
+BOOL CALLBACK playerScroll (_In_ HWND h, _In_ LPARAM p) {
 		*((HWND *)p) = h;
 		wchar_t c[] = L"VMWindow";
 		const int c_len = sizeof(c) / sizeof(*c);
 		wchar_t buf[c_len];
 		GetClassName(h, buf, c_len);
-		return (WNDENUMPROC)lstrcmp(buf, c);
+		return lstrcmp(buf, c);
 };
 
-WNDENUMPROC workstationScroll (HWND h, LPARAM p) {
+BOOL CALLBACK workstationScroll (_In_ HWND h, _In_ LPARAM p) {
 		*((HWND *)p) = h;
 		wchar_t c[] = L"VMUIView";//L"VMUIView";//L"MKSEmbedded";//L"VMware.GuestWindow";		
 		const int c_len = sizeof(c) / sizeof(*c);
 		wchar_t buf[c_len];
 		GetClassName(h, buf, c_len);
-		return (WNDENUMPROC)lstrcmp(buf, c);
+		return lstrcmp(buf, c);
 };
 
 int CALLBACK WinMain(
